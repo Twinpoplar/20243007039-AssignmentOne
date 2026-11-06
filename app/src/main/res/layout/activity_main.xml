@@ -54,7 +54,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:background="?attr/selectableItemBackground"> <!-- Add click ripple effect -->
+                android:background="@drawable/button_selector">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -66,6 +66,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/facilities" />
             </LinearLayout>
 
@@ -77,7 +80,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:background="?attr/selectableItemBackground">
+                android:background="@drawable/button_selector">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -89,6 +92,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/events" />
             </LinearLayout>
         </LinearLayout>
@@ -108,7 +114,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:background="?attr/selectableItemBackground">
+                android:background="@drawable/button_selector">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -120,6 +126,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/clubs" />
             </LinearLayout>
 
@@ -131,7 +140,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:background="?attr/selectableItemBackground">
+                android:background="@drawable/button_selector">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -143,6 +152,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/support" />
             </LinearLayout>
         </LinearLayout>
