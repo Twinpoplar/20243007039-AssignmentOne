@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +21,16 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout btnClubs = findViewById(R.id.btn_clubs);
         LinearLayout btnSupport = findViewById(R.id.btn_support);
 
+        /* Note: The Toast messages are retained because Figures 6-9 in the
+           assignment specifications explicitly show the toast feedback
+           before/while transitioning to the DetailActivity.
+           */
+
         // Facilities click -> Pass ID 0
         btnFacilities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Facilities clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("TOPIC_ID", 0); // Pass unique identifier
                 startActivity(intent);
@@ -34,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Events clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("TOPIC_ID", 1);
                 startActivity(intent);
@@ -44,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         btnClubs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Clubs clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("TOPIC_ID", 2);
                 startActivity(intent);
@@ -54,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         btnSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Support clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
                 intent.putExtra("TOPIC_ID", 3);
                 startActivity(intent);
