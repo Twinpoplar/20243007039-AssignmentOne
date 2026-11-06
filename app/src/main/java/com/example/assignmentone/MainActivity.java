@@ -1,9 +1,9 @@
 package com.example.assignmentone;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,43 +14,49 @@ public class MainActivity extends AppCompatActivity {
         // Link to the main layout
         setContentView(R.layout.activity_main);
 
-        // 1. Find the four button containers by their IDs from XML
+        // Find the four button containers by their IDs from XML
         LinearLayout btnFacilities = findViewById(R.id.btn_facilities);
         LinearLayout btnEvents = findViewById(R.id.btn_events);
         LinearLayout btnClubs = findViewById(R.id.btn_clubs);
         LinearLayout btnSupport = findViewById(R.id.btn_support);
 
-        // 2. Set onClickListeners for each button
-        // Facilities click event
+        // Facilities click -> Pass ID 0
         btnFacilities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Show a Toast message
-                Toast.makeText(MainActivity.this, "Facilities clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("TOPIC_ID", 0); // Pass unique identifier
+                startActivity(intent);
             }
         });
 
-        // Events click event
+        // Events click -> Pass ID 1
         btnEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Events clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("TOPIC_ID", 1);
+                startActivity(intent);
             }
         });
 
-        // Clubs click event
+        // Clubs click -> Pass ID 2
         btnClubs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Clubs clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("TOPIC_ID", 2);
+                startActivity(intent);
             }
         });
 
-        // Support click event
+        // Support click -> Pass ID 3
         btnSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Support clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra("TOPIC_ID", 3);
+                startActivity(intent);
             }
         });
     }
