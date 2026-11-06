@@ -34,22 +34,25 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <!-- Icon (Image will be set dynamically later) -->
+            <!-- Icon -->
             <ImageView
                 android:id="@+id/detail_icon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="16dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/img_btn_events" />
 
             <!-- Title Text -->
             <TextView
                 android:id="@+id/detail_title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
                 android:text="Title Placeholder"
                 android:textColor="@android:color/white"
                 android:textSize="32sp" />
