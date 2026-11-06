@@ -21,6 +21,11 @@
             android:scaleType="centerCrop"
             android:src="@drawable/bg_main" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000" />
+
         <!-- Welcome Message -->
         <TextView
             android:layout_width="match_parent"
